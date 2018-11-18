@@ -10,6 +10,7 @@ if command -v apt-get >/dev/null 2>&1;then
     tar xf libsodium-1.0.16.tar.gz && cd libsodium-1.0.16
     ./configure && make -j2 && make install
     ldconfig
+    rm -rf /tmp/libsodium-1.0.16
 elif command -v yum >/dev/null 2>&1;then
     yum -y groupinstall "Development Tools"
     cd /tmp
@@ -18,4 +19,7 @@ elif command -v yum >/dev/null 2>&1;then
     ./configure && make -j2 && make install
     echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
     ldconfig
+    rm -rf /tmp/libsodium-1.0.16
+elif command -v pacman >/dev/null 2>&1;then
+    pacman -S libsodium
 fi
