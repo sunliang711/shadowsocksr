@@ -10,7 +10,7 @@ After=network.target
 
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/tmux new-session -d -s "ssr server" -n "ssr window" /usr/bin/python /root/shadowsocksr/server.py
+ExecStart=/usr/bin/tmux new-session -d -s "ssr server" -n "ssr window" /usr/bin/python ROOT/server.py
 ExecStop=/usr/bin/tmux kill-session -t 'ssr server'
 
 #Type=simple
