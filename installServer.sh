@@ -48,5 +48,7 @@ if [[ "$ssr" != [nN] ]];then
     echo "use mujson_mgr.py to add user."
 fi
 
-
-
+read -p "enable BBR? [Y/n]" bbr
+if [[ "$bbr" != [nN] ]];then
+    bash enableBBR.sh
+fi
