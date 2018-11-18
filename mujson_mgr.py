@@ -9,7 +9,10 @@ import getopt
 import sys
 import json
 import base64
+import os
 
+me=os.path.dirname(os.path.realpath(__file__))
+os.chdir(me)
 
 class MuJsonLoader(object):
 	def __init__(self):

@@ -1,3 +1,10 @@
+### New
+#### server
+run `bash ./installServer.sh` to install server-end service,then use mujson_mgr.py to add user.
+#### client
+client exe file is shadowsocks/local.py,config file is config.json(root directory).
+
+===========
 ShadowsocksR
 ===========
 
