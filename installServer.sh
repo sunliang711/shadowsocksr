@@ -11,8 +11,8 @@ usage(){
     cat<<-EOF
 	Usage: $(basename $0) CMD
 	CMD:
-		install
-		uninstall
+	    install
+	    uninstall
 	EOF
     exit 0
 }
@@ -55,13 +55,14 @@ install(){
         systemctl daemon-reload
         systemctl enable ssr.service
         systemctl start ssr.service
-        echo "use mujson_mgr.py to add user."
     fi
 
     read -p "enable BBR? [Y/n]" bbr
     if [[ "$bbr" != [nN] ]];then
         bash enableBBR.sh
     fi
+
+    echo "use mujson_mgr.py to add user."
 }
 
 uninstall(){
